@@ -1,0 +1,69 @@
+{
+	"artistic_and_professional_performances": {
+		"type": "array",
+		"Description": "List of artistic and professional performances",
+		"items": {
+			"type": "object",
+			"required": ["faculty_id","info"],
+			"properties": {
+				"faculty_id": {
+					"Description": "personal faculty identification",
+					"type": "string"
+				},
+				"info": {
+					"type": "object",
+					"required": ["title", "venue", "date_info", "publisher", "situation"],
+					"properties": {
+						"title": {
+							"Description": "Title of work performed",
+							"type": "string"
+						},
+						"venue": {
+							"Description": "Venue where performance was held",
+							"type": "string"
+						},
+						"date_info": {
+							"Description": "Date or dates performed",
+							"type": "object",
+							"required": ["start_date"],
+							"properties": {
+								"start_date": {
+									"Description": "First date of performance",
+									"type": "string",
+									"format": "date-time"
+								},
+								"end_date": {
+									"Description": "Last date of performance, if it lasted multiple days",
+									"type": "string",
+									"format": "date-time"
+								}
+							}
+						},
+						"publisher": {
+							"Description": "Who sponsored the performance",
+							"type": "string"
+						},
+						"situation": {
+							"Description": "reason for performance",
+							"type": "string",
+							"enum": ["audtion", "invitation", "commission", "competition", "none of these"]
+						},
+						"description": {
+							"Description": "description of the performance",
+							"type": "string"
+						},
+						"url": {
+							"Description": "link to performance",
+							"type": "string",
+							"format": "url"
+						},
+						"coauthors": {
+							"Description": "co-authors and other performers, if there were any",
+							"type": "string"
+						}
+					}
+				}
+			}
+		}
+	}
+}

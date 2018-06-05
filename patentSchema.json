@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+  "title": "Patent JSON Schema",
+  "faculty_id": {
+    "type": "string"
+  },
+  "title": {
+    "type": "string"
+  },
+  "patent_type": {
+    "type": "string"
+  },
+  "year_info": {
+    "type": "number"
+  },
+  "patent_num": {
+    "type": "string"
+  },
+  "patent_"
+}

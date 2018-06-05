@@ -1,0 +1,78 @@
+{
+	"teaching": {
+		"type": "array",
+		"properties": {
+			"course": {
+				"type": "object",
+				"properties": {
+					"course_info": {
+						"type": "object",
+						"properties": {
+							"course_num": {
+								"Description": "course number",
+								"type": "string",
+								"format": "^[0-9]{3}"
+							},
+							"course_title": {
+								"Description": "title of taught course",
+								"type": "string"
+							},
+							"credit_hours": {
+								"Description": "?",
+								"type": "float"
+							},
+							"days": {
+								"Description": "days that course was taught on",
+								"type": "string"
+							}
+						}
+					},
+					"entrollment": {
+						"Description": "How many students were in the class",
+						"type": "object",
+						"properties": {
+							"enrollment1": {
+								"Description": "Undergraduate entrollment",
+								"type": "integer"
+							},
+							"enrollment2": {
+								"Description": "Upperclassment entrollment",
+								"type": "integer"
+							},
+							"enrollment3": {
+								"Description": "Graduate enrollment",
+								"type": "integer"
+							},
+							"cap": {
+								"Description": "Max students in the class",
+								"type": "integer",
+								"minimum": 0,
+								"maximum": 200 
+							}
+						}
+					},
+					"instructor_role": {
+						"Description": "Role in classroom",
+						"type": "string",
+						"enum": ["primary instructor", "secondary instructor", "teaching assistant"]
+					},
+					"team_taught": {
+						"Description": "Percent of team taught",
+						"type": "integer"
+					},
+					"contact_hours": {
+						"Description": "?",
+						"type": "float"
+					},
+					"designation": {
+						"Description": "course designation",
+						"type": "string"
+					},
+
+					},
+					"delivery": 
+				}
+			}
+		}
+	}
+}
