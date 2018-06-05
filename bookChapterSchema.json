@@ -1,0 +1,122 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+  "title": "Book Chapter JSON Schema",
+  "type": "object",
+  "properties": {
+  	"faculty_id": {
+  		"type": "string"
+  	},
+  	"chap_title": {
+  		"type": "string"
+  	},
+  	"book_title": {
+  		"type": "string"
+  	},
+  	"year_info": {
+  		"type": "number"
+  	},
+  	"series_title": {
+  		"type": "string"
+  	},
+  	"volume": {
+  		"type": "string"
+  	},
+  	"edition": {
+  		"type": "string"
+  	},
+  	"coauthors": {
+      "type": "object",
+      "properties": {
+      	"coauthor_string": {
+      		"type": "string",
+      		"description": "A single line of all contributing authors, separated by commas."
+      	},   
+      	"coauthor_list": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "first_name",
+              "last_name"
+            ],
+            "properties": {
+              "first_name": {
+                "type": "string"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "middle_initial": {
+                "type": "string"
+              },
+                "email": {
+                "type": "string",
+                "format": "email"
+              },
+              "affiliation": {
+                "type": "object",
+                "required": ["institution_name","ipeds_id"],
+                "properties": {
+                  "institution_name": {"type": "string"},
+                  "intf_db_id": {
+                    "description": "The faculty180 database.",
+                    "type": "string"
+                  },
+                  "ipeds_id": {
+                    "description": "Standard identifier for Universities",
+                    "type": "string"
+                  }                     
+                }
+              },
+              "ids": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "pid"
+                  ],
+                  "minItems": 1,
+                  "properties": {
+                    "source": {
+                      "description": "Where the id comes from",
+                      "type": "string"
+                    },
+                    "pid": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+     		}
+      } 		
+  	},
+  	"pages": {
+  		"type": "string"
+  	},
+  	"publisher": {
+  		"type": "object",
+  		"properties": {
+  			"name": {
+  				"type": "string"
+  			},
+  			"location": {
+  				"type": "string"
+  			}
+  		}
+  	},
+  	"identifier": {
+  		"type": "string"
+  	},
+  	"url": {
+  		"type": "string",
+  		"format": "uri"
+  	},
+  	"description": {
+  		"type": "string"
+  	}
+  }
+}
