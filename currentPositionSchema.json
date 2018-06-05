@@ -1,0 +1,17 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Current Position Schema",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"posistion_title": {
+			"type": "string"
+		},
+		"date_started": {
+			"type": "string"
+		}
+	}
+}

@@ -1,0 +1,107 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+  "title": "Contact Information Schema",
+  "type": "object",
+  "properties": {
+  	"office_info": {
+  		"type": "object",
+  		"properties": {
+  			"office_number": {
+  				"type": "[string, number]"
+  			},
+  			"office_building": {
+  				"type": "string"
+  			}
+  		}
+  	},
+  	"home_address": {
+  		"type": "object",
+  		"properties": {
+  			"home_street1": {
+  				"type": "string"
+  			},
+  			"home_street2": {
+  				"type": "string"
+  			},
+  			"home_city": {
+  				"type": "string"
+  			},
+  			"home_state": {
+  				"type": "string"
+  			},
+  			"home_country": {
+  				"type": "string"
+  			},
+  			"home_zip": {
+  				"type": "string"
+  			}
+  		}
+  	},
+  	"personal_address": {
+  		"type": "object",
+  		"properties": {
+  			"personal_street1": {
+  				"type": "string"
+  			},
+  			"personal_street2": {
+  				"type": "string"
+  			},
+  			"personal_city": {
+  				"type": "string"
+  			},
+  			"personal_state": {
+  				"type": "string"
+  			},
+  			"personal_zip": {
+  				"type": "string"
+  			}
+  		}
+  	},
+  	"email": {
+  		"type": "string",
+  		"format": "email"
+  	},
+  	"email2": {
+  		"type": "string",
+  		"format": "email"
+  	},
+  	"emergency_contact": {
+  		"type": "object",
+  		"properties": {
+  			"contact_firstname": {
+  				"type": "string"
+  			},
+  			"contact_lastname": {
+  					"type": "string"
+  			},
+  			"contact_phone": {
+  				"type": "string",
+  				"pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+  			}
+  		}
+  	},
+  	"home_phone": {
+  		"type": "string",
+  		"pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+  	},
+  	"work_phone": {
+  		"type": "string",
+  		"pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+  	},
+  	"cell_phone": {
+  		"type": "string",
+  		"patterm": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+  	},
+  	"department_phone": {
+  		"type": "string",
+  		"pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$"
+  	},
+  	"pager": {
+  		"type": "string"
+  	},
+  	"fax_number": {
+  		"type": "string"
+  	}
+  }
+}

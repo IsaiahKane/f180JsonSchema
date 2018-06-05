@@ -1,0 +1,14 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+  "title": "Biography Schema",
+  "type": "object",
+  "properties": {
+  	"biography": {
+  		"type": "string"
+  	},
+  	"faculty_id": {
+  		"type": "string"
+  	}
+  }
+}

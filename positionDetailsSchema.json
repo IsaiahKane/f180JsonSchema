@@ -1,0 +1,20 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Position Details Schema",
+	"type": "object",
+	"properties": {
+		"year_started": {
+			"type": "number"
+		},
+		"start_date": {
+			"type": "string"
+		},
+		"primary_unit": {
+			"type": "string"
+		},
+		"secondary_unit": {
+			"type": "string"
+		}
+	}
+}

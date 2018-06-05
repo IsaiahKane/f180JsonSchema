@@ -1,0 +1,76 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Degrees Schema",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"degree": {
+			"type": "string"
+		},
+		"highest_degree_earned": {
+			"type": "integer"
+		},
+		"level_of_degree": {
+			"type": "string"
+		},
+		"terminal_degree": {
+			"type": "integer"
+		},
+		"majors": {
+			"type": "array",
+			"items": {
+				"major": {
+					"type": "string"
+				}
+			}
+		},
+		"minors": {
+			"type": "array",
+			"items": {
+				"minor": {
+					"type": "string"
+				}
+			}
+		},
+		"granting_institution": {
+			"type": "object",
+			"properties": {
+				"insitution": {
+					"type": "string"
+				},
+				"city": {
+					"type": "string"
+				},
+				"state": {
+					"type": "string"
+				},
+				"country": { //nation
+					"type": "string"
+				}
+			}
+		},
+		"thesis_title": {
+			"type": "string"
+		},
+		"thesis_advisor": {
+			"type": "object",
+			"properties": {
+				"firstname": {
+					"type": "string"
+				},
+				"lastname": {
+					"type": "string"
+				}
+			}
+		},
+		"year_conferred": {
+			"type": "number"
+		},
+		"honor": {
+			"type": "string"
+		}
+	}
+}
