@@ -1,0 +1,201 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Scholarly Activities Schema",		
+	"scholarly_activities": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"required": ["pub_type","title","source"],
+				"properties": {
+					"pub_type" : { "type": "string" },
+					"title": {"type": "string"},
+					"journal": {
+						"description": "The source outlet that published the scholarly output, or the book if the work is a chapter",
+						"oneOf": [
+							{"type": "string"},
+							{"type": "object",
+								"required": ["journal_name", "ids"],
+								"properties": 
+								{
+									"journal_name": {"type": "string"},
+									"ids": {
+										"type": "array",
+										"minItems": 1,
+										"items": {
+											"type": "object",
+											"required": ["id", "id_type"],
+											"properties": {
+												"id": {"type": "string"},
+												"id_type": {
+													"type": "string", 
+													"description": "The identifying type for the Journal's unique identifier",
+													"enum": ["ISSN","eISSN","ISBN","standard_abbreviation"]
+												}
+											}
+										}
+									}
+								}
+							}
+						]
+					},
+					"year_info": {"type": ["number", "string"]},
+					"date_info": {"type": "string"},
+					"volume": {"type": ["number", "string"]},
+					"number_info": {"type": ["number", "string"]},
+					"pages": {"type": "string"},
+					"publisher": {
+						"description": "Generally used for books, proceedings, art, performances, etc. to specify the organization that produced/output the scholarly or creative work",
+						"type": "string"
+					},
+					"url": {
+						"description": "The URL for a version of the scholarly work available online",
+						"format": "uri",
+						"type": "string"
+					},
+					"abstract": {"type": "string"},
+					"authors": {
+						"description": "a comma separated string of the author names (as it might appear in print) and an array of author objects with details (with authors in array in the same order they appear in the author listing in the publication source",
+						"type": "object",
+						"required": ["author_string"],
+						"properties": {
+							"author_string": {
+								"description": "A comma seperate listing of authors names as it appeared in print, i.e. what was pulled with the citation details from the source.  If we generate this the preferred format is firstname1 middlename1 lastname1, firstname2 middlename2 lastname2, etc.",
+								"type": "string"
+							},
+							"author_list": {
+								"description": "A array listing of authors LISTED IN SAME ORDER AS IN PUBLICATION'S AUTHOR LIST",
+								"type": "array",
+								"items": {
+									"type": "object",
+									"required": ["first_name","last_name"],
+									"properties": {
+										"first_name": {"type": "string"},
+										"last_name": {"type": "string"},
+										"middle_initial": {"type": "string"},
+										"email": {"type": "string"},
+										"affiliation": {
+											"type": "object",
+											"required": ["institution_name","ipeds_id"],
+											"properties": {
+												"institution_name": {"type": "string"},
+												"intf_db_id": {
+													"description": "The faculty180 database.",
+													"type": "string"
+												},
+												"ipeds_id": {
+													"description": "Standard identifier for Universities",
+													"type": "string"
+												}											
+											}
+										},
+										"ids": {
+											"description": "An array of objects that list possible known unique identifiers for each author and the identified source of those identities. If this is a faculty member that we have parsed previously then we need to list id=PID and source=Interfolio",
+											"type": "array",
+											"items": {
+												"type": "object",
+												"required": ["source", "pid"],
+												"minItems": 1,
+												"properties": {
+													"source": {
+														"description": "Where the ID comes from, e.g. Interfolio, Faculty180, ORCID, ShoreGroup, etc.",
+														"type": "string"
+													},
+													"pid": {"type": "string"}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"external_ids": {
+						"description": "An array of standardized IDs for the piece of scholarly work",
+						"type": "array",
+						"minItems": 1,
+						"items": {
+							"type": "object",
+							"required": ["pid","label"],
+							"properties": {
+								"pid": {
+									"description": "The unique permanent identifier being captured",
+									"type": "string"
+								},
+								"label": {
+									"description" : "The standard label used for this identifier, e.g. Patent #, ISBN, PMID, DOI, etc.",
+									"type": "string",
+									"enum": ["PMID", "ShoreGroup", "DOI","Faculty180"]
+								},
+								"source": {
+									"description": "A descriptive string of where the ID originates, e.g. Shore Group, PubMed, WoS, DOI, CrossRef, etc.",
+									"type": "string"
+								},
+								"uri": {
+									"format": "uri",
+									"type": "string"
+								}
+							}
+						}
+					},
+					"source": {
+						"description": "Where did the data come to Interfolio from ('origin') and which scholarly database was this piece of scholarship found at, e.g. PubMed, WoS, Google Scholar, None, etc.",
+						"type": "object",
+						"required": ["origin","database"],
+						"properties":{
+							"origin": {
+								"description":"This is source that is providing the data to us, e.g. Faculty manual input, Shore Group, Web of Science, etc.",
+								"type": "string",
+								"default": "Manual Input"
+							},
+							"database": {
+								"description":"This is the database where the source was pulled from, e.g. PubMed, WoS, Google Scholar. If it was input manually by a faculty member this value would be 'None'.",
+								"type": "string",
+								"default": "None"
+							}
+						}
+					},
+					"match_percent": {"type": "number"},
+					"classifications": {
+						"description": "A collection of ways that we would want to classify and organize Scholarly work",
+						"type": "array",
+						"minItems": 1,
+						"items": {
+							"type": "object",
+							"required": ["keyword","classification_scheme"],
+							"properties": {
+								"keyword": {"type": "string"},
+								"classification_scheme": {
+									"description": "This would be the classification scheme that we are representing/utilizing. If it is an open keyword not associated with a standard classification scheme this value should be 'None'",
+									"type":"string",
+									"default":"None"
+								}
+							}
+						}
+					},
+					"bibliometrics":{
+						"type": "array",
+						"minItems": 1,
+						"items": {
+							"type": "object",
+							"required": ["measure","value","timestamp"],
+							"properties": {
+								"measure": {"type": "string"},
+								"value": {"type": "string"},
+								"timestamp": { 
+									"format": "date-time",
+									"type": "string"
+								},
+								"type": {
+									"description":"Direct measures are countable things like: citation count, times cited, acceptance rate, etc.; Examples of Calculated metrics are H-Index, I-Index, etc.; and Altmetrics are metrics on usage and viewership online",
+									"type": "string",
+									"enum":["direct","calculated","altmetric"]
+								},
+								"source": {"type": "string"}							
+							}
+						}
+					}
+				}
+			}
+		}
+}

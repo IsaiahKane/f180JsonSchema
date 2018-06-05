@@ -1,0 +1,151 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+  "title": "Grants JSON Schema",
+  "type": "object",
+  "required": [
+    "faculty_id",
+    "title",
+    "years_of_funding"
+  ],
+  "properties": {
+    "faculty_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "sponsor": {
+      "type": "string"
+    },
+    "institution": {
+      "type": "string"
+    },
+    "grant_id": {
+      "type": "string"
+    },
+    "grant_proposal_id": {
+      "type": "string"
+    },
+    "grant_proposal_budget": {
+      "type": "string"
+    },
+    "award_date": {
+      "type": "string",
+      "pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$" // 2003-01-01, 2003/01/01, or 2003.01.01
+    },
+    "start_date": {
+      "type": "string",
+      "pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$" // 2003-01-01, 2003/01/01, or 2003.01.01
+    },
+    "end_date": {
+      "type": "string",
+      "pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$" // 2003-01-01, 2003/01/01, or 2003.01.01
+    },
+    "funding_date": {
+      "type": "string",
+      "pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$" // 2003-01-01, 2003/01/01, or 2003.01.01
+    },
+    "period_length": {
+      "type": "number"
+    },
+    "period_unit": {
+      "type": "string"
+    },
+    "has_indirect_funding": {
+      "type": "boolean"
+    },
+    "has_indirect_funding_unit": {
+      "type": "boolean"
+    },
+    "indirect_cost_rate": { // idcrate
+      "type": "number"
+    },
+    "total_funding": {
+      "type": "number"
+    },
+    "total_direct_funding": {
+      "type": "number"
+    },
+    "currency_type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "description_summary": { // abstract
+      "type": "string"
+    },
+    "years_of_funding": {
+      "type": "number"
+    },
+    "url": {
+      "type": "string"
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "percent_effort": {
+            "type": "string"
+          },
+          "primary_unit_id": {
+            "type": "string"
+          },
+          "orcid_id": {
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "Other",
+              "PI",
+              "CoPI",
+              "CoInvestigator",
+              "Program Coordinator"
+            ]
+          }
+        }
+      }
+    },
+    "approval_for_preaward_spending": {
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "type_of_funding": {
+      "enum": [
+        "Corporate",
+        "Federal",
+        "Foundation",
+        "Institutional",
+        "Not for Profit",
+        "State",
+        "Other"
+      ]
+    },
+    "type_of_grant": {
+      "enum": [
+        "Research",
+        "Service",
+        "Training",
+        "Program"
+      ]
+    },
+    "status": {
+      "enum": [
+        "In Preparation - Not Submitted",
+        "Submitted for Review",
+        "Funded - In Progress",
+        "Completed",
+        "Submitted - Not Funded",
+        "Work Discontinued"
+      ]
+    }
+  }
+}
