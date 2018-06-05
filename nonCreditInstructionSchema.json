@@ -1,0 +1,52 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Non-Credit Instruction Schema",
+	"type": "object",
+	"properties": {
+		"start_term": {
+			"type": "string"
+		},
+		"title": {
+			"type": "string"
+		},
+		"audience": {
+			"type": "string",
+			"enum": [
+				"Teaching",
+				"Scholarship/Research",
+				"Service, Community",
+				"Service, Professional",
+				"Service, Univeristy"
+			]
+		},
+		"location_of_instruction": {
+			"type": "string"
+		},
+		"sponsor": {
+			"type": "object",
+			"properties": {
+				"organization": {
+					"type": "string"
+				},
+				"location": {
+					"type": "string"
+				}
+			}
+		},
+		"start_date": {
+			"type": "string",
+			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"
+		},
+		"end_date": {
+			"type": "string",
+			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"
+		},
+		"num_of_participants": {
+			"type": "integer"
+		},
+		"description": {
+			"type": "string"
+		}
+	}
+}

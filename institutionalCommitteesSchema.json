@@ -1,0 +1,37 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Institutional Committees Schema",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"committee_id": {
+			"type": "integer"
+		},
+		"unit_id": {
+			"type": "integer"
+		},
+		"start_term": {
+			"type": "string"
+		},
+		"end_term": {
+			"type": "string"
+		},
+		"committee_name": {
+			"type": "string"
+		},
+		"responsibility": {
+			"type": "string",
+			"enum": [
+				"Member",
+				"Chair",
+				"Other"
+			]
+		},
+		"approx_hours_spent_per_term": {
+			"type": "number"
+		}
+	}
+}
