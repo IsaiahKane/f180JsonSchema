@@ -35,5 +35,8 @@
 		"recertification": {
 			"type": "string"
 		}
+		"further_details": {
+			"type": "string"
+		}
 	}
 }
