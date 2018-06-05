@@ -1,0 +1,112 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Presentation Schema",
+  "type": "object",
+  "properties": {
+    "faculty_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "event": {
+      "description": "Conference or event where the presentation was held",
+      "type": "string"
+    },
+    "year_info": {
+      "type": "number"
+    },
+    "date_info": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "object",
+      "description": "Sponsoring organization for the presentation",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        }
+      }
+    },
+    "coauthors": {
+      "type": "object",
+      "properties": {
+        "author_string": {
+          "type": "string",
+          "description": "Comma separated string of all contributors on the presentation."
+        },
+        "author_list": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "first_name",
+              "last_name"
+            ],
+            "properties": {
+              "first_name": {
+                "type": "string"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "middle_initial": {
+                "type": "string"
+              },
+                "email": {
+                "type": "string",
+                "format": "email"
+              },
+              "affiliation": {
+                "type": "object",
+                "required": ["institution_name","ipeds_id"],
+                "properties": {
+                  "institution_name": {"type": "string"},
+                  "intf_db_id": {
+                    "description": "The faculty180 database.",
+                    "type": "string"
+                  },
+                  "ipeds_id": {
+                    "description": "Standard identifier for Universities",
+                    "type": "string"
+                  }                     
+                }
+              },
+              "ids": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "source",
+                    "pid"
+                  ],
+                  "minItems": 1,
+                  "properties": {
+                    "source": {
+                      "description": "Where the id comes from",
+                      "type": "string"
+                    },
+                    "pid": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

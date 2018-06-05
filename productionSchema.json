@@ -1,0 +1,90 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Production Schema",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"title": {
+			"type": "string"
+		},
+		"venue": {
+			"type": "string"
+		},
+		"year_info": {
+			"type": "number"
+		},
+		"date_info": {
+			"type": "string"
+		},
+		"location": {
+			"type": "string"
+		},
+		"sponsor_org": {
+			"type": "string"
+		},
+		"contributors": {
+			"type": "object",
+			"properties": {
+				"contributor_string": {
+					"type": "string"
+				},
+				"contributor_list": {
+					"description": "A array listing of authors LISTED IN SAME ORDER AS IN PUBLICATION'S AUTHOR LIST",
+					"type": "array",
+						"items": {
+							"type": "object",
+							"required": ["first_name","last_name"],
+							"properties": {
+								"first_name": {"type": "string"},
+								"last_name": {"type": "string"},
+								"middle_initial": {"type": "string"},
+								"email": {"type": "string"},
+								"affiliation": {
+									"type": "object",
+									"required": ["institution_name","ipeds_id"],
+									"properties": {
+										"institution_name": {"type": "string"},
+										"intf_db_id": {
+											"description": "The faculty180 database.",
+											"type": "string"
+										},
+										"ipeds_id": {
+											"description": "Standard identifier for Universities",
+											"type": "string"
+										}											
+									}
+								},
+								"ids": {
+									"description": "An array of objects that list possible known unique identifiers for each author and the identified source of those identities. If this is a faculty member that we have parsed previously then we need to list id=PID and source=Interfolio",
+									"type": "array",
+									"items": {
+										"type": "object",
+										"required": ["source", "pid"],
+										"minItems": 1,
+										"properties": {
+											"source": {
+												"description": "Where the ID comes from, e.g. Interfolio, Faculty180, ORCID, ShoreGroup, etc.",
+												"type": "string"
+											},
+											"pid": {"type": "string"}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"url": {
+			"type": "string",
+			"format": "uri"
+		},
+		"description": {
+			"type": "string"
+		}
+	}
+}
