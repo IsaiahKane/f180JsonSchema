@@ -1,7 +1,7 @@
 # f180JsonSchema
 
 #### Schemas Needing Review:
---*Additional Teachings And Pedagogical Activities
+<br/>Additional Teachings And Pedagogical Activities
 Advising Load 
 Agricultural Extension Work
 Awards and Honors
