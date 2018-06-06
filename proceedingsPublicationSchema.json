@@ -119,6 +119,23 @@
 		},
 		"description": {
 			"type": "string"
-		}
+		},
+		"review_type": {
+      "type": "string",
+      "enum": [
+        "Blind Peer Reviewed",
+        "Non-blind Peer Reviewed",
+        "Editorially Reviewed",
+        "Invited",
+        "Not Reviewed"
+      ]
+    },
+    "in_ex": {
+      "type": "string",
+      "enum": [
+        "Internal",
+        "External"
+      ]
+    }
 	}
 }

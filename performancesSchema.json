@@ -99,6 +99,41 @@
     },
     "description": {
     	"type": "string"
+    },
+    "reason": {
+      "type": "string",
+      "enun": [
+        "Audition",
+        "Invitation",
+        "Commission",
+        "Competition",
+        "None Of These"
+      ]
+    },
+    "inv_or_acc": {
+      "type": "string",
+      "enum": [
+        "Invited",
+        "Accepted",
+        "Not Applicable"
+      ]
+    },
+    "review_type": {
+      "type": "string",
+      "enum": [
+        "Blind Peer Reviewed",
+        "Non-blind Peer Reviewed",
+        "Editorially Reviewed",
+        "Invited",
+        "Not Reviewed"
+      ]
+    },
+    "in_ex": {
+      "type": "string",
+      "enum": [
+        "Internal",
+        "External"
+      ]
     }
 	}
 }

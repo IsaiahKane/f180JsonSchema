@@ -110,5 +110,31 @@
  		},
  		"description": {
  			"type": "string"
+    },
+    "type_of_review": {
+      "type": "string",
+      "enum": [
+        "Review, Product/Software",
+        "Review, Creative Work",
+        "Review, Book"
+      ]
+    },
+    "review_type": {
+      "type": "string",
+      "enum": [
+        "Blind Peer Reviewed",
+        "Non-blind Peer Reviewed",
+        "Editorially Reviewed",
+        "Invited",
+        "Not Reviewed"
+      ]
+    },
+    "in_ex": {
+      "type": "string",
+      "enum": [
+        "Internal",
+        "External"
+      ]
+    }
   }
 }

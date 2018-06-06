@@ -123,6 +123,31 @@
 		},
 		"description": {
 			"type": "string"
-		}
+		},
+    "work_type": {
+      "type": "string",
+      "enum": [
+        "Instructor's Manual",
+        "Material regarding New Courses/Curricula",
+        "Study Guide"
+      ]
+    },
+    "review_type": {
+      "type": "string",
+      "enum": [
+        "Blind Peer Reviewed",
+        "Non-Blind Peer Reviewed",
+        "Editorially Reviewed",
+        "Invited",
+        "Not Reviewed"
+      ]
+    },
+    "in_ex": {
+      "type": "string",
+      "enum": [
+        "Internal",
+        "External"
+      ]
+    }
 	}
 }

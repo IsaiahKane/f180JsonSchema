@@ -1,30 +1,28 @@
 {
-	"$schema": "http://json-schema.org/draft-06/schema#",
-	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
-	"title": "Presentation Schema",
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+  "title": "Patent JSON Schema",
   "type": "object",
-  "properties": {
+  "propeties": {
     "faculty_id": {
       "type": "string"
     },
     "title": {
       "type": "string"
     },
-    "event": {
-      "description": "Conference or event where the presentation was held",
+    "patent_type": {
       "type": "string"
     },
     "year_info": {
       "type": "number"
     },
-    "date_info": {
-      "type": "string"
-    },
     "publisher": {
       "type": "object",
-      "description": "Sponsoring organization for the presentation",
       "properties": {
-        "name": {
+        "patent_num": {
+          "type": "string"
+        },
+        "patent_nationality": {
           "type": "string"
         },
         "location": {
@@ -32,14 +30,14 @@
         }
       }
     },
-    "coauthors": {
+    "contributors": {
       "type": "object",
       "properties": {
-        "author_string": {
+        "coauthor_string": {
           "type": "string",
-          "description": "Comma separated string of all contributors on the presentation."
-        },
-        "author_list": {
+          "description": "A single line of all contributing authors, separated by commas."
+        },   
+        "coauthor_list": {
           "type": "array",
           "items": {
             "type": "object",
@@ -99,7 +97,7 @@
             }
           }
         }
-      }
+      }        
     },
     "url": {
       "type": "string",
@@ -108,48 +106,18 @@
     "description": {
       "type": "string"
     },
-    "academic_type": {
+    "patent_or_copyright": {
       "type": "string",
       "enum": [
-        "Paper",
-        "Poster",
-        "Workshop",
-        "Seminar",
-        "Round Table",
-        "Reading Of Creative Work/Performance",
-        "Keynote/Pienary Address",
-        "Lecture",
-        "Panel Discussion",
-        "Oral Presentation",
-        "Demonstration",
-        "Exhibit"
-      ]
-    },
-    "inv_or_acc": {
-      "type": "string",
-      "enum": [
-        "Invited",
-        "Accepted",
-        "Not Applicable"
-      ]
-    },
-    "meeting_type": {
-      "type": "string",
-      "enum": [
-        "Session",
-        "Seminar",
-        "Round Table",
-        "Panel",
-        "Conference",
-        "Workshop",
-        "Other"
+        "Patent",
+        "Copyright"
       ]
     },
     "review_type": {
       "type": "string",
       "enum": [
-        "Blind Peer Reviewed",
-        "Non-blind Peer Reviewed",
+        "Blind Peer Reveiwed",
+        "Non-Blind Peer Reveiwed",
         "Editorially Reviewed",
         "Invited",
         "Not Reviewed"
@@ -161,6 +129,6 @@
         "Internal",
         "External"
       ]
-    }
+    } 
   }
 }

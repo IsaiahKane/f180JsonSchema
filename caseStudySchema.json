@@ -10,7 +10,7 @@
     "title": {
       "type": "string"
     },
-    "caseSource": {
+    "case_source": {
       "description": "Source for the case",
       "type": "string"
     },
@@ -97,6 +97,7 @@
     },
     "description": {
       "type": "string"
-    }
+    },
+
   }
 }

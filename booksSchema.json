@@ -114,6 +114,65 @@
   	},
   	"description": {
   		"type": "string"
-  	}
+  	},
+    "book_type_general": {
+      "type": "string",
+      "enum": [
+        "Book, Non-Scholarly-Revised",
+        "Book, Non-Scholarly-New",
+        "Book, Scholarly-Revised",
+        "Book, Scholarly-New",
+        "Book, Textbook-Revised",
+        "Book, Textbook-New"
+      ]
+    },
+    "book_type": {
+      "type": "string",
+      "enum": [
+        "Professional Practice or Trade",
+        "Reasearch Monograph",
+        "Textbook",
+        "Other"
+      ]
+    },
+    "review_type": {
+      "type": "string",
+      "enum": [
+        "Blind Peer Reviewed",
+        "Non-blind Peer Reviewed",
+        "Editorially Reviewed",
+        "Not Reviewed"
+      ]
+    },
+    "student_involvement": {
+      "type": "string",
+      "enum": [
+        "Undergraduate/Grad",
+        "Graduate",
+        "Undergraduate"
+      ]
+    },
+    "historical_status": {
+      "type": "string",
+      "enum": [
+        "First Draft Complete",
+        "Data Analysis Complete",
+        "Data Collection Complete",
+        "Rejected, Now Revising",
+        "Not Accepted",
+        "Research Question Identified",
+        "Accepted",
+        "Revising to Resubmit",
+        "Published",
+        "Submitted"
+      ]
+    },
+    "publicly_available": {
+      "type": "string",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    }
   }
 }

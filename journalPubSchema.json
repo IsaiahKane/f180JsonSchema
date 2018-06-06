@@ -117,12 +117,38 @@
   		"type": "string",
   		"format": "uri"
   	},
-  	"identification": {
+  	"identifier": {
   		"type": "string",
   		"description": "ISBN/ISSN/Case number for article"
   	},
   	"description": {
   		"type": "string"
-  	}
+  	},
+    "article_type": {
+      "type": "string",
+      "enum": [
+        "Journal Article, Professional Journal",
+        "Journal Article, In-House Journal",
+        "Journal Article, Academic Journal",
+        "Journal Article, Public or Trade Journal"
+      ]
+    },
+    "review_type": {
+      "type": "string",
+      "enum": [
+        "Blind Peer Reviewed",
+        "Non-Blind Peer Reviewed",
+        "Editorially Reviewed",
+        "Invited",
+        "Not Reviewed"
+      ]
+    },
+    "in_ex": {
+      "type": "string",
+      "enum": [
+        "Internal",
+        "External"
+      ]
+    }
   }
 }

@@ -109,7 +109,7 @@
     "description": {
       "type": "string"
     },
-    "purpose": {
+    "reason": {
       "type": "string",
       "enum": [
         "Audition",
