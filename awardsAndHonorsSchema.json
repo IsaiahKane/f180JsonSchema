@@ -1,0 +1,73 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Awards and Honors Schema",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"start_term": {
+			"type": "string"
+		},
+		"end_term": {
+			"type": "string"
+		},
+		"start_date": {
+			"type": "string",
+			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"
+		},
+		"end_date": {
+			"type": "string",
+			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"
+		},
+		"sponsor": {
+			"type": "string"
+		},
+		"sponsor_location": {
+			"type": "string"
+		},
+		"description": {
+			"type": "string"
+		},
+		"awardee_status": {
+			"type": "string",
+			"enum": [
+				"Award Finalist",
+				"Award Nominee",
+				"Honor or Award Winner"
+			]
+		},
+		"category": {
+			"type": "string",
+			"enum": [
+				"Instructional",
+				"Professional",
+				"Research"
+			]
+		},
+		"award_type": {
+			"type": "string",
+			"enum": [
+				"Teaching",
+				"Scholarliship/Research",
+				"Service, Community",
+				"Service, Professional",
+				"Service, Univeristy Fellowship"
+			]
+		},
+		"scope": {
+			"type": "string",
+			"enum": [
+				"International",
+				"National",
+				"Regional",
+				"State",
+				"Local",
+				"University",
+				"College",
+				"Department"
+			]
+		}
+	}
+}
