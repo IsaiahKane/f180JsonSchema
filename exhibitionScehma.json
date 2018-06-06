@@ -101,13 +101,31 @@
           }
         }
       }
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "description": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string",
+      "enum": [
+        "Audition",
+        "Invitation",
+        "Commission",
+        "Competition",
+        "None of These"
+      ]
+    },
+    "inv_or_acc": {
+      "type": "string",
+      "enum": [
+        "Invited",
+        "Accepted",
+        "Not Applicable"
+      ]
     }
-  },
-  "url": {
-    "type": "string",
-    "format": "uri"
-  },
-  "description": {
-    "type": "string"
-  },
+  }
 }
