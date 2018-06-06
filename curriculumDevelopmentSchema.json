@@ -1,0 +1,35 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Curriculum Development Schema",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"start_term": {
+			"type": "string"
+		},
+		"end_term": {
+			"type": "string"
+		},
+		"title": {
+			"type": "string"
+		},
+		"level": {
+			"type": "string",
+			"enum": [
+				"Course",
+				"Certificate",
+				"Degree Propgram",
+				"Track/Concentration/Sequence"
+			]
+		},
+		"num_of_impacted_student": {
+			"type": ["number", "string"]
+		},
+		"description": {
+			"type": "string"
+		}
+	}
+}

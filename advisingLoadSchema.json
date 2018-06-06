@@ -1,0 +1,44 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Advising Load Schema",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"start_term": {
+			"type": "string"
+		},
+		"undergrad": {
+			"type": "integer"
+		},
+		"masters": {
+			"type": "integer"
+		},
+		"doctoral": {
+			"type": "integer"
+		},
+		"other": {
+			"type": "integer"
+		},
+		"hours_spent": {
+			"type": "number"
+		},
+		"description": {
+			"type": "string"
+		},
+		"advising_type": {
+			"type": "string",
+			"enum": [
+				"Classroom/Group",
+				"Advising",
+				"Individual Advising of Assigned Advisees",
+				"Individual Advising of Unassigned Advisees",
+				"Orientation Advising",
+				"Thesis Advising",
+				"Transer Evaluation Advising"
+			]
+		}
+	}
+}

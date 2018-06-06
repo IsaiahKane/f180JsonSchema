@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Additional Teaching and Pedagogical Activities Schema",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"term": {
+			"type": "string"
+		},
+		"title": {
+			"type": "string"
+		},
+		"institution": {
+			"type": "string"
+		},
+		"program": {
+			"description": "Department or program within which activity took place",
+			"type": "string"
+		},
+		"hours_spent": {
+			"type": "number"
+		},
+		"description": {
+			"type": "string"
+		}
+	}
+}

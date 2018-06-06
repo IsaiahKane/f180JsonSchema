@@ -1,0 +1,29 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Reassigned Duties Schema",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"start_term": {
+			"type": "string"
+		},
+		"end_term": {
+			"type": "string"
+		},
+		"hours": {
+			"type": "number"
+		},
+		"academic_unit": {
+			"type": "string"
+		},
+		"unit_level": {
+			"type": "integer"
+		},
+		"description": {
+			"type": "string"
+		}
+	}
+}

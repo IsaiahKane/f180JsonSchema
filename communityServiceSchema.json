@@ -1,0 +1,59 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Community Service Schema",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"title": {
+			"type": "string"
+		},
+		"start_term": {
+			"type": "string"
+		},
+		"end_term": {
+			"string"
+		},
+		"organization": {
+			"type": "object",
+			"properties": {
+				"org_name": {
+					"type": "string"
+				},
+				"org_city": {
+					"type": "string"
+				},
+				"org_state": {
+					"type": "string"
+				},
+				"org_country": {
+					"type": "string"
+				}
+			}
+		},
+		"description": {
+			"type": "string"
+		},
+		"scope": {
+			"type": "string",
+			"enum": [
+				"Local",
+				"State",
+				"Regional",
+				"National",
+				"International"
+			]
+		},
+		"role": {
+			"type": "string",
+			"enum": [
+				"Chair",
+				"Co-Chair",
+				"Coordinator",
+				"Member"
+			]
+		}
+	}
+}

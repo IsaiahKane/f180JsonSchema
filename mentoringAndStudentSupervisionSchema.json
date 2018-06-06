@@ -1,0 +1,75 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Mentoring and Student Supervision Schema",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"term": {
+			"type": "string"
+		},
+		"start_date": {
+			"type": "string",
+			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"
+		},
+		"end_date": {
+			"type": "string",
+			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"
+		},
+		"institution": {
+			"type": "string"
+		},
+		"student_name": {
+			"type": "string"
+		},
+		"student_id": {
+			"type": "string"
+		},
+		"student_program": {
+			"type": "string"
+		},
+		"student_level": {
+			"type": "string",
+			"enum": [
+				"Undergraduate",
+				"Master",
+				"Doctoral",
+				"Post-doctoral"
+			]
+		},
+		"role": {
+			"type": "string",
+			"enum": [
+				"Faculty Mentor",
+				"Independent Study Instructor",
+				"Project Supervisor",
+				"Reader",
+				"Thesis Committee Member",
+				"Thesis Advisor",
+				"Other"
+			]
+		},
+		"hours_spent": {
+			"type": "number"
+		},
+		"proj_title": {
+			"type": "string"
+		},
+		"num_ofStudents": {
+			"type": "number"
+		},
+		"description": {
+			"type": "string"
+		},
+		"stage_of_completion": {
+			"type": "string",
+			"enum": [
+				"Completed",
+				"In-Process",
+				"Proposal"
+			]
+		}
+	}
+}

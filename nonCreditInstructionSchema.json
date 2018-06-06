@@ -4,35 +4,11 @@
 	"title": "Non-Credit Instruction Schema",
 	"type": "object",
 	"properties": {
-		"start_term": {
-			"type": "string"
-		},
 		"title": {
 			"type": "string"
 		},
-		"audience": {
-			"type": "string",
-			"enum": [
-				"Teaching",
-				"Scholarship/Research",
-				"Service, Community",
-				"Service, Professional",
-				"Service, Univeristy"
-			]
-		},
-		"location_of_instruction": {
+		"start_term": {
 			"type": "string"
-		},
-		"sponsor": {
-			"type": "object",
-			"properties": {
-				"organization": {
-					"type": "string"
-				},
-				"location": {
-					"type": "string"
-				}
-			}
 		},
 		"start_date": {
 			"type": "string",
@@ -42,11 +18,90 @@
 			"type": "string",
 			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"
 		},
+		"sponsor": {
+			"type": "string"
+		},
+		"sponsor_location": {
+			"type": "string"
+		},
+		"audience": {
+			"type": "string"
+		},
+		"location_of_instruction": {
+			"type": "string"
+		},
 		"num_of_participants": {
-			"type": "integer"
+			"type": "number"
 		},
 		"description": {
 			"type": "string"
+		},
+		"acad_or_prof": {
+			"type": "string",
+			"enum": [
+				"Academic",
+				"Professional"
+			]
+		},
+		"student_collab": {
+			"type": "string",
+			"enum": [
+				"Yes",
+				"No"
+			]
+		},
+		"level": {
+			"type": "string",
+			"enum": [
+				"Undergraduate - Lower Level",
+				"Undergraduate - Upper Level",
+				"Certificate",
+				"Masters",
+				"Doctoral"
+			]
+		},
+		"other_teaching_role": {
+			"type": "string",
+			"enum": [
+				"Committee Chair/Co-Chair",
+				"Committee Member",
+				"Consultant",
+				"Course Designer",
+				"Exam Preparation or Grading",
+				"External Committee Member",
+				"Guest Speaker/Lecturer",
+				"Instructor",
+				"Internship Supervisor",
+				"Reviewer",
+				"Presenter",
+				"Subject Matter Expert"
+			]
+		},
+		"delivery_method": {
+			"type": "string",
+			"enum": [
+				"Face to Face",
+				"Hybrid",
+				"Online",
+				"Study Abroad"
+			]
+		},
+		"instruction_type": {
+			"type": "string",
+			"enum": [
+				"Certification",
+				"Continuing Education",
+				"Faculty Internship",
+				"Guest Lecture",
+				"Management/Executive",
+				"Development",
+				"Review Course",
+				"Seminar",
+				"Workshop",
+				"Center for Professional",
+				"Development",
+				"Center for Teaching and Learning"
+			]
 		}
 	}
 }

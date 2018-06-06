@@ -1,0 +1,35 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Clincal Work Schema",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"start_term": {
+			"type": "string"
+		},
+		"end_term": {
+			"type": "string"
+		},
+		"role": {
+			"type": "string"
+		},
+		"site": {
+			"type": "string"
+		},
+		"clinical_site": {
+			"type": "string"
+		},
+		"hours_spent": {
+			"type": ["number","string"]
+		},
+		"medical_discipline": {
+			"type": "string"
+		},
+		"description": {
+			"type": "string"
+		}
+	}
+}

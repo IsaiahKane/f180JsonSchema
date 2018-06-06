@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
+	"title": "Editiorial and Peer Review Work",
+	"type": "object",
+	"properties": {
+		"faculty_id": {
+			"type": "string"
+		},
+		"publication": {
+			"type": "string"
+		},
+		"start_term": {
+			"type": "string"
+		},
+		"end_term": {
+			"type": "string"
+		},
+		"year": {
+			"type": "number"
+		},
+		"role": {
+			"type": "string",
+			"enum": [
+				"Editor",
+				"Reviewer"
+			]
+		}
+	}
+}
