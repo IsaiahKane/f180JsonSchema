@@ -4,33 +4,17 @@
   "title": "Book JSON Schema",
   "type": "object",
   "properties": {
-  	"faculty_id": {
-  		"type": "string"
-  	},
-  	"title": {
-  		"type": "string"
-  	},
-  	"year_info": {
-  		"type": "number"
-  	},
-  	"volume": {
-  		"type": "string"
-  	},
-  	"edition": {
-  		"type": "string"
-  	},
-  	"series_title": {
-  		"type": "string"
-  	},
+  	"faculty_id": {"type": "string"},
+  	"title": {"type": "string"},
+  	"year_info": {"type": "number"},
+  	"volume": {"type": "string"},
+  	"edition": {"type": "string"},
+  	"series_title": {"type": "string"},
   	"publisher": {
   		"type": "object",
   		"proeprties": {
-  			"name": {
-  				"type": "string"
-  			},
-  			"location": {
-  				"type": "string"
-  			},
+  			"name": {"type": "string"},
+  			"location": {"type": "string"},
   		}
   	},
   	"coauthors": {
@@ -49,15 +33,9 @@
               "last_name"
             ],
             "properties": {
-              "first_name": {
-                "type": "string"
-              },
-              "last_name": {
-                "type": "string"
-              },
-              "middle_initial": {
-                "type": "string"
-              },
+              "first_name": {"type": "string"},
+              "last_name": {"type": "string"},
+              "middle_initial": {"type": "string"},
                 "email": {
                 "type": "string",
                 "format": "email"
@@ -91,9 +69,7 @@
                       "description": "Where the id comes from",
                       "type": "string"
                     },
-                    "pid": {
-                      "type": "string"
-                    }
+                    "pid": {"type": "string"}
                   }
                 }
               }
@@ -102,19 +78,13 @@
      		}
       } 		  		
   	},
-  	"pages": {
-  		"type": "string"
-  	},
+  	"pages": {"type": "string"},
   	"url": {
   		"type": "string",
   		"format": "uri"
   	},
-  	"identifier": {
-  		"type": "string"
-  	},
-  	"description": {
-  		"type": "string"
-  	},
+  	"identifier": {"type": "string"},
+  	"description": {"type": "string"},
     "book_type_general": {
       "type": "string",
       "enum": [

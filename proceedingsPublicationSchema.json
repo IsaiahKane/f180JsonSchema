@@ -4,50 +4,26 @@
 	"title": "Proceedings Publication schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {
-			"type": "string"
-		},
-		"title": {
-			"type": "string"
-		},
-		"conference": {
-			"type": "string"
-		},
-		"year_info": {
-			"type": "number"
-		},
-		"date_info": {
-			"type": "string"
-		},
-		"volume": {
-			"type": "string"
-		},
-		"number_info": {
-			"type": "string"
-		},
-		"pages": {
-			"type": "string"
-		},
+		"faculty_id": {"type": "string"},
+		"title": {"type": "string"},
+		"conference": {"type": "string"},
+		"year_info": {"type": "number"},
+		"date_info": {"type": "string"},
+		"volume": {"type": "string"},
+		"number_info": {"type": "string"},
+		"pages": {"type": "string"},
 		"publisher": {
 			"type": "object",
 			"properties": {
-				"name": {
-					"type": "string"
-				},
-				"location": {
-					"type": "string"
-				}
+				"name": {"type": "string"},
+				"location": {"type": "string"}
 			}
 		},
-		"conference_location": {
-			"type": "string"
-		},
+		"conference_location": {"type": "string"},
 		"authors": {
 			"type": "object",
 			"properties": {
-				"author_string": {
-					"type": "string"
-				},
+				"author_string": {"type": "string"},
 	      "coauthor_list": {
 	        "type": "array",
 	        "items": {
@@ -57,15 +33,9 @@
 	            "last_name"
 	          ],
 	          "properties": {
-	            "first_name": {
-	              "type": "string"
-	            },
-	            "last_name": {
-	              "type": "string"
-	            },
-	            "middle_initial": {
-	              "type": "string"
-	            },
+	            "first_name": {"type": "string"},
+	            "last_name": {"type": "string"},
+	            "middle_initial": {"type": "string"},
 	              "email": {
 	              "type": "string",
 	              "format": "email"
@@ -99,9 +69,7 @@
 	                    "description": "Where the id comes from",
 	                    "type": "string"
 	                  },
-	                  "pid": {
-	                    "type": "string"
-	                  }
+	                  "pid": {"type": "string"}
 	                }
 	              }
 	            }
@@ -114,12 +82,8 @@
 			"type": "string",
 			"format": "uri"
 		},
-		"identifier": {
-			"type": "string"
-		},
-		"description": {
-			"type": "string"
-		},
+		"identifier": {"type": "string"},
+		"description": {"type": "string"},
 		"review_type": {
       "type": "string",
       "enum": [

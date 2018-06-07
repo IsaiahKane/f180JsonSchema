@@ -4,47 +4,27 @@
   "title": "Journal Publication JSON Schema",
   "type": "object",
   "properties": {
-  	"faculty_id": {
-  		"type": "string"
-  	},
-  	"title": {
-  		"type": "string"
-  	},
-  	"journal": {
-  		"type": "string"
-  	},
-  	"series": {
-  		"type": "string"
-  	},
+  	"faculty_id": {"type": "string"},
+  	"title": {"type": "string"},
+  	"journal": {"type": "string"},
+  	"series": {"type": "string"},
   	"publisher": {
   		"type": "object",
   		"properties": {
-  			"name": {
-  				"type": "string"
-  			},
+  			"name": {"type": "string"},
   			"location": {
   				"type": "string",
   			},
-  			"pub_country": {
-  				"type": "string"
-  			},
+  			"pub_country": {"type": "string"},
   		}
   	},
-  	"year_info": {
-  		"type": "number"
-  	},
-  	"date_info": {
-  		"type": "string"
-  	},
-  	"volume": {
-  		"type": "string"
-  	},
+  	"year_info": {"type": "number"},
+  	"date_info": {"type": "string"},
+  	"volume": {"type": "string"},
     "coauthors": {
       "type": "object",
       "properties": {    
-        "author_string": {
-          "type": "string"
-        },
+        "author_string": {"type": "string"},
       	"author_list": {
           "type": "array",
           "items": {
@@ -54,15 +34,9 @@
               "last_name"
             ],
             "properties": {
-              "first_name": {
-                "type": "string"
-              },
-              "last_name": {
-                "type": "string"
-              },
-              "middle_initial": {
-                "type": "string"
-              },
+              "first_name": {"type": "string"},
+              "last_name": {"type": "string"},
+              "middle_initial": {"type": "string"},
                 "email": {
                 "type": "string",
                 "format": "email"
@@ -96,9 +70,7 @@
                       "description": "Where the id comes from",
                       "type": "string"
                     },
-                    "pid": {
-                      "type": "string"
-                    }
+                    "pid": {"type": "string"}
                   }
                 }
               }
@@ -107,12 +79,8 @@
         }
       }
     },
-  	"number_info": {
-  		"type": "string"
-  	},
-  	"pages": {
-  		"type": "string"
-  	},
+  	"number_info": {"type": "string"},
+  	"pages": {"type": "string"},
   	"url": {
   		"type": "string",
   		"format": "uri"
@@ -121,9 +89,7 @@
   		"type": "string",
   		"description": "ISBN/ISSN/Case number for article"
   	},
-  	"description": {
-  		"type": "string"
-  	},
+  	"description": {"type": "string"},
     "article_type": {
       "type": "string",
       "enum": [

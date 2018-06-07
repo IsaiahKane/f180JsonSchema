@@ -4,26 +4,16 @@
   "title": "Case Study Schema",
   "type": "object",
   "properties": {
-    "faculty_id": {
-      "type": "string"
-    },
-    "title": {
-      "type": "string"
-    },
+    "faculty_id": {"type": "string"},
+    "title": {"type": "string"},
     "case_source": {
       "description": "Source for the case",
       "type": "string"
     },
-    "publisher": {
-      "type": "string"
-    },
-    "year_info": {
-      "type": "number"
-    },
+    "publisher": {"type": "string"},
+    "year_info": {"type": "number"},
     "coauthors": {
-      "coauthor_string": {
-        "type": "string"
-      },    
+      "coauthor_string": {"type": "string"},    
       "coauthor_list": {
         "type": "array",
         "items": {
@@ -33,15 +23,9 @@
             "last_name"
           ],
           "properties": {
-            "first_name": {
-              "type": "string"
-            },
-            "last_name": {
-              "type": "string"
-            },
-            "middle_initial": {
-              "type": "string"
-            },
+            "first_name": {"type": "string"},
+            "last_name": {"type": "string"},
+            "middle_initial": {"type": "string"},
               "email": {
               "type": "string",
               "format": "email"
@@ -75,9 +59,7 @@
                     "description": "Where the id comes from",
                     "type": "string"
                   },
-                  "pid": {
-                    "type": "string"
-                  }
+                  "pid": {"type": "string"}
                 }
               }
             }
@@ -85,19 +67,13 @@
         }
       }
     },
-    "pages": {
-      "type": "string"
-    },
+    "pages": {"type": "string"},
     "url": {
       "type": "string",
       "format": "uri"
     },
-    "identifier": {
-      "type": "string"
-    },
-    "description": {
-      "type": "string"
-    },
+    "identifier": {"type": "string"},
+    "description": {"type": "string"},
 
   }
 }

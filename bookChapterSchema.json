@@ -4,27 +4,13 @@
   "title": "Book Chapter JSON Schema",
   "type": "object",
   "properties": {
-  	"faculty_id": {
-  		"type": "string"
-  	},
-  	"chap_title": {
-  		"type": "string"
-  	},
-  	"book_title": {
-  		"type": "string"
-  	},
-  	"year_info": {
-  		"type": "number"
-  	},
-  	"series_title": {
-  		"type": "string"
-  	},
-  	"volume": {
-  		"type": "string"
-  	},
-  	"edition": {
-  		"type": "string"
-  	},
+  	"faculty_id": {"type": "string"},
+  	"chap_title": {"type": "string"},
+  	"book_title": {"type": "string"},
+  	"year_info": {"type": "number"},
+  	"series_title": {"type": "string"},
+  	"volume": {"type": "string"},
+  	"edition": {"type": "string"},
   	"coauthors": {
       "type": "object",
       "properties": {
@@ -41,15 +27,9 @@
               "last_name"
             ],
             "properties": {
-              "first_name": {
-                "type": "string"
-              },
-              "last_name": {
-                "type": "string"
-              },
-              "middle_initial": {
-                "type": "string"
-              },
+              "first_name": {"type": "string"},
+              "last_name": {"type": "string"},
+              "middle_initial": {"type": "string"},
                 "email": {
                 "type": "string",
                 "format": "email"
@@ -83,9 +63,7 @@
                       "description": "Where the id comes from",
                       "type": "string"
                     },
-                    "pid": {
-                      "type": "string"
-                    }
+                    "pid": {"type": "string"}
                   }
                 }
               }
@@ -94,30 +72,20 @@
      		}
       } 		
   	},
-  	"pages": {
-  		"type": "string"
-  	},
+  	"pages": {"type": "string"},
   	"publisher": {
   		"type": "object",
   		"properties": {
-  			"name": {
-  				"type": "string"
-  			},
-  			"location": {
-  				"type": "string"
-  			}
+  			"name": {"type": "string"},
+  			"location": {"type": "string"}
   		}
   	},
-  	"identifier": {
-  		"type": "string"
-  	},
+  	"identifier": {"type": "string"},
   	"url": {
   		"type": "string",
   		"format": "uri"
   	},
-  	"description": {
-  		"type": "string"
-  	},
+  	"description": {"type": "string"},
     "chapter_type": {
       "type": "string",
       "enum": [

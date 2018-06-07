@@ -4,30 +4,16 @@
   "title": "Patent JSON Schema",
   "type": "object",
   "propeties": {
-    "faculty_id": {
-      "type": "string"
-    },
-    "title": {
-      "type": "string"
-    },
-    "patent_type": {
-      "type": "string"
-    },
-    "year_info": {
-      "type": "number"
-    },
+    "faculty_id": {"type": "string"},
+    "title": {"type": "string"},
+    "patent_type": {"type": "string"},
+    "year_info": {"type": "number"},
     "publisher": {
       "type": "object",
       "properties": {
-        "patent_num": {
-          "type": "string"
-        },
-        "patent_nationality": {
-          "type": "string"
-        },
-        "location": {
-          "type": "string"
-        }
+        "patent_num": {"type": "string"},
+        "patent_nationality": {"type": "string"},
+        "location": {"type": "string"}
       }
     },
     "contributors": {
@@ -46,15 +32,9 @@
               "last_name"
             ],
             "properties": {
-              "first_name": {
-                "type": "string"
-              },
-              "last_name": {
-                "type": "string"
-              },
-              "middle_initial": {
-                "type": "string"
-              },
+              "first_name": {"type": "string"},
+              "last_name": {"type": "string"},
+              "middle_initial": {"type": "string"},
                 "email": {
                 "type": "string",
                 "format": "email"
@@ -88,9 +68,7 @@
                       "description": "Where the id comes from",
                       "type": "string"
                     },
-                    "pid": {
-                      "type": "string"
-                    }
+                    "pid": {"type": "string"}
                   }
                 }
               }
@@ -103,9 +81,7 @@
       "type": "string",
       "format": "uri"
     },
-    "description": {
-      "type": "string"
-    },
+    "description": {"type": "string"},
     "patent_or_copyright": {
       "type": "string",
       "enum": [

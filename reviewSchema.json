@@ -5,30 +5,14 @@
   "type": "object",
   "required": ["faculty_id", "title", "year_info", "publisher"],
   "properties": {
-  	"faculty_id": {
-  		"type": "string"
-  	},
-  	"title": {
-  		"type": "string"
-  	},
-  	"year_info": {
-  		"type": "number"
-  	},
-  	"outlet": {
-  		"type": "string"
-  	},
-  	"volume": {
-  		"type": "string"
-  	},
-  	"publisher": {
-  		"type": "string"
-  	},
-  	"pub_location": {
-  		"type": "string"
-  	},
-  	"pub_country": {
-  		"type": "string"
-  	},
+  	"faculty_id": {"type": "string"},
+  	"title": {"type": "string"},
+  	"year_info": {"type": "number"},
+  	"outlet": {"type": "string"},
+  	"volume": {"type": "string"},
+  	"publisher": {"type": "string"},
+  	"pub_location": {"type": "string"},
+  	"pub_country": {"type": "string"},
     "coauthors": {
       "type": "object",
       "properties": {
@@ -45,15 +29,9 @@
               "last_name"
             ],
             "properties": {
-              "first_name": {
-                "type": "string"
-              },
-              "last_name": {
-                "type": "string"
-              },
-              "middle_initial": {
-                "type": "string"
-              },
+              "first_name": {"type": "string"},
+              "last_name": {"type": "string"},
+              "middle_initial": {"type": "string"},
                 "email": {
                 "type": "string",
                 "format": "email"
@@ -87,9 +65,7 @@
                       "description": "Where the id comes from",
                       "type": "string"
                     },
-                    "pid": {
-                      "type": "string"
-                    }
+                    "pid": {"type": "string"}
                   }
                 }
               }
@@ -98,19 +74,13 @@
      		}
       }
     },
- 		"number_info": {
- 			"type": "string"
- 		},
- 		"pages": {
- 			"type": "string"
- 		},
+ 		"number_info": {"type": "string"},
+ 		"pages": {"type": "string"},
  		"url": {
  			"type": "string",
  			"format": "uri"
  		},
- 		"description": {
- 			"type": "string"
-    },
+ 		"description": {"type": "string"},
     "type_of_review": {
       "type": "string",
       "enum": [

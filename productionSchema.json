@@ -4,33 +4,17 @@
 	"title": "Production Schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {
-			"type": "string"
-		},
-		"title": {
-			"type": "string"
-		},
-		"venue": {
-			"type": "string"
-		},
-		"year_info": {
-			"type": "number"
-		},
-		"date_info": {
-			"type": "string"
-		},
-		"location": {
-			"type": "string"
-		},
-		"sponsor_org": {
-			"type": "string"
-		},
+		"faculty_id": {"type": "string"},
+		"title": {"type": "string"},
+		"venue": {"type": "string"},
+		"year_info": {"type": "number"},
+		"date_info": {"type": "string"},
+		"location": {"type": "string"},
+		"sponsor_org": {"type": "string"},
 		"contributors": {
 			"type": "object",
 			"properties": {
-				"contributor_string": {
-					"type": "string"
-				},
+				"contributor_string": {"type": "string"},
 				"contributor_list": {
 					"description": "A array listing of authors LISTED IN SAME ORDER AS IN PUBLICATION'S AUTHOR LIST",
 					"type": "array",
@@ -83,9 +67,7 @@
 			"type": "string",
 			"format": "uri"
 		},
-		"description": {
-			"type": "string"
-		},
+		"description": {"type": "string"},
     "review_type": {
       "type": "string",
       "enum": [

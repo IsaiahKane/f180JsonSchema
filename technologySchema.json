@@ -4,21 +4,11 @@
 	"title": "Technology Schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {
-			"type": "string"
-		},
-		"title": {
-			"type": "string"
-		},
-		"outlet": {
-			"type": "string"
-		},
-		"year_info": {
-			"type": "number"
-		},
-		"date_info": {
-			"type": "string"
-		},
+		"faculty_id": {"type": "string"},
+		"title": {"type": "string"},
+		"outlet": {"type": "string"},
+		"year_info": {"type": "number"},
+		"date_info": {"type": "string"},
 		"collaborators": {
       "type": "object",
       "properties": {
@@ -35,15 +25,9 @@
               "last_name"
             ],
             "properties": {
-              "first_name": {
-                "type": "string"
-              },
-              "last_name": {
-                "type": "string"
-              },
-              "middle_initial": {
-                "type": "string"
-              },
+              "first_name": {"type": "string"},
+              "last_name": {"type": "string"},
+              "middle_initial": {"type": "string"},
                 "email": {
                 "type": "string",
                 "format": "email"
@@ -77,9 +61,7 @@
                       "description": "Where the id comes from",
                       "type": "string"
                     },
-                    "pid": {
-                      "type": "string"
-                    }
+                    "pid": {"type": "string"}
                   }
                 }
               }
@@ -91,20 +73,14 @@
 		"publisher": {
 			"type": "object",
 			"properties": {
-				"name": {
-					"type": "string"
-				},
-				"location": {
-					"type": "string"
-				}
+				"name": {"type": "string"},
+				"location": {"type": "string"}
 			}
 		},
 		"url": {
 			"type": "string",
 			"format": "uri"
 		},
-		"description": {
-			"type": "string"
-		}
+		"description": {"type": "string"}
 	}
 }
