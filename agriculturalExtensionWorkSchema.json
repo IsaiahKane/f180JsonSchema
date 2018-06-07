@@ -4,24 +4,12 @@
 	"title": "Agricultural Extension Work Schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {
-			"type": "string"
-		},
-		"title": {
-			"type": "string"
-		},
-		"role": {
-			"type": "string"
-		},
-		"term": {
-			"type": "string"
-		},
-		"site": {
-			"type": "string"
-		},
-		"site_location": {
-			"type": "string"
-		},
+		"faculty_id": {"type": "string"},
+		"title": {"type": "string"},
+		"role": {"type": "string"},
+		"term": {"type": "string"},
+		"site": {"type": "string"},
+		"site_location": {"type": "string"},
 		"date": {
 			"type": "string",
 			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"

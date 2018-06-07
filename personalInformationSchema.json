@@ -4,58 +4,30 @@
 	"title": "Personal Information Schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {
-			"type": "string"
-		},
+		"faculty_id": {"type": "string"},
 		"name": {
 			"type": "object",
 			"properties": {
-				"first_name": {
-					"type": "string"
-				},
-				"last_name": {
-					"type": "string"
-				},
-				"suffix": {
-					"type": "string"
-				},
-				"credentials": {
-					"type": "string"
-				},
-				"salutation": {
-					"type": "string"
-				},
-				"honorific": {
-					"type": "string"
-				},
-				"pref_name": {
-					"type": "string"
-				}
+				"first_name": {"type": "string"},
+				"last_name": {"type": "string"},
+				"suffix": {"type": "string"},
+				"credentials": {"type": "string"},
+				"salutation": {"type": "string"},
+				"honorific": {"type": "string"},
+				"pref_name": {"type": "string"}
 			}
 		},
-		"gender": {
-			"type": "string"
-		},
-		"race": {
-			"type": "string"
-		},
-		"nationality": {
-			"type": "string"
-		},
-		"citizenship": {
-			"type": "string"
-		},
+		"gender": {"type": "string"},
+		"race": {"type": "string"},
+		"nationality": {"type": "string"},
+		"citizenship": {"type": "string"},
 		"languages": {
 			"type": "array",
 			"items": {
-				"language": {
-					"type": "string"
-				}
+				"language": {"type": "string"}
 			}
 		},
-		"external_id": {
-			"type": "string"
-		},
+		"external_id": {"type": "string"},
 		"employment_status": {
 			"type": "string",
 			"enum": [

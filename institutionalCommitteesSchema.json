@@ -4,24 +4,12 @@
 	"title": "Institutional Committees Schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {
-			"type": "string"
-		},
-		"committee_id": {
-			"type": "integer"
-		},
-		"unit_id": {
-			"type": "integer"
-		},
-		"start_term": {
-			"type": "string"
-		},
-		"end_term": {
-			"type": "string"
-		},
-		"committee_name": {
-			"type": "string"
-		},
+		"faculty_id": {"type": "string"},
+		"committee_id": {"type": "integer"},
+		"unit_id": {"type": "integer"},
+		"start_term": {"type": "string"},
+		"end_term": {"type": "string"},
+		"committee_name": {"type": "string"},
 		"responsibility": {
 			"type": "string",
 			"enum": [
@@ -30,8 +18,6 @@
 				"Other"
 			]
 		},
-		"approx_hours_spent_per_term": {
-			"type": "number"
-		}
+		"approx_hours_spent_per_term": {"type": "number"}
 	}
 }

@@ -4,74 +4,32 @@
 	"title": "Teaching Schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {
-			"type": "string"
-		},
-		"term": {
-			"type": "string"
-		},
-		"institution": {
-			"type": "string"
-		},
-		"prefix": {
-			"type": "string"
-		},
-		"course_number": {
-			"type": "string"
-		},
-		"course_designation": {
-			"type": "string"
-		},
-		"course_section": {
-			"type": "string"
-		},
-		"course_title": {
-			"type": "string"
-		},
-		"days_taught": {
-			"type": "string"
-		},
-		"time_taught": {
-			"type": "string"
-		},
+		"faculty_id": {"type": "string"},
+		"term": {"type": "string"},
+		"institution": {"type": "string"},
+		"prefix": {"type": "string"},
+		"course_number": {"type": "string"},
+		"course_designation": {"type": "string"},
+		"course_section": {"type": "string"},
+		"course_title": {"type": "string"},
+		"days_taught": {"type": "string"},
+		"time_taught": {"type": "string"},
 		"enrollment": {
 			"type": "object",
 			"properties": {
-				"total_enrollment": {
-					"type": "integer"
-				},
-				"undergrad_enrollment": {
-					"type": "integer"
-				},
-				"upperclassmen_enrollment": {
-					"type": "integer"
-				},
-				"grad_enrollment": {
-					"type": "integer"
-				},
-				"max_enrollment": {
-					"type": "integer"
-				}
+				"total_enrollment": {"type": "integer"},
+				"undergrad_enrollment": {"type": "integer"},
+				"upperclassmen_enrollment": {"type": "integer"},
+				"grad_enrollment": {"type": "integer"},
+				"max_enrollment": {"type": "integer"}
 			}
 		},
-		"student_credit_hours":{
-			"type": "number"
-		},
-		"teaching_load": {
-			"type": ["string", "number"]
-		},
-		"credit_hours": {
-			"type": "number"
-		},
-		"contact_hours": {
-			"type": "number"
-		},
-		"percent_team_taught": {
-			"type": "integer"
-		},
-		"weight": {
-			"type": "number"
-		},
+		"student_credit_hours":{"type": "number"},
+		"teaching_load": {"type": ["string", "number"]},
+		"credit_hours": {"type": "number"},
+		"contact_hours": {"type": "number"},
+		"percent_team_taught": {"type": "integer"},
+		"weight": {"type": "number"},
 		"delivery_method": {
 			"type": "string",
 			"enum": [
@@ -80,27 +38,13 @@
 				"Online"
 			]
 		},
-		"location": {
-			"type": "string"
-		},
-		"instruction_mode": {
-			"type": "string"
-		},
-		"lab_hours": {
-			"type": "number"
-		},
-		"lecture_hours": {
-			"type": "number"
-		},
-		"extra_hours": {
-			"type": "number"
-		},
-		"extra_hours_label": {
-			"type": "number"
-		},
-		"identifier": {
-			"type": "string"
-		},
+		"location": {"type": "string"},
+		"instruction_mode": {"type": "string"},
+		"lab_hours": {"type": "number"},
+		"lecture_hours": {"type": "number"},
+		"extra_hours": {"type": "number"},
+		"extra_hours_label": {"type": "number"},
+		"identifier": {"type": "string"},
 		"instructor_of_record": {
 			"type": "string",
 			"enum": [

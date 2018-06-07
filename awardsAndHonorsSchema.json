@@ -4,15 +4,9 @@
 	"title": "Awards and Honors Schema",
 	"type": "object",
 	"properties": {
-		"name": {
-			"type": "string"
-		},
-		"start_term": {
-			"type": "string"
-		},
-		"end_term": {
-			"type": "string"
-		},
+		"name": {"type": "string"},
+		"start_term": {"type": "string"},
+		"end_term": {"type": "string"},
 		"start_date": {
 			"type": "string",
 			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"
@@ -21,15 +15,9 @@
 			"type": "string",
 			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"
 		},
-		"sponsor": {
-			"type": "string"
-		},
-		"sponsor_location": {
-			"type": "string"
-		},
-		"description": {
-			"type": "string"
-		},
+		"sponsor": {"type": "string"},
+		"sponsor_location": {"type": "string"},
+		"description": {"type": "string"},
 		"awardee_status": {
 			"type": "string",
 			"enum": [

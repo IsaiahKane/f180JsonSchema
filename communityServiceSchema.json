@@ -4,38 +4,22 @@
 	"title": "Community Service Schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {
-			"type": "string"
-		},
-		"title": {
-			"type": "string"
-		},
-		"start_term": {
-			"type": "string"
-		},
+		"faculty_id": {"type": "string"},
+		"title": {"type": "string"},
+		"start_term": {"type": "string"},
 		"end_term": {
 			"string"
 		},
 		"organization": {
 			"type": "object",
 			"properties": {
-				"org_name": {
-					"type": "string"
-				},
-				"org_city": {
-					"type": "string"
-				},
-				"org_state": {
-					"type": "string"
-				},
-				"org_country": {
-					"type": "string"
-				}
+				"org_name": {"type": "string"},
+				"org_city": {"type": "string"},
+				"org_state": {"type": "string"},
+				"org_country": {"type": "string"}
 			}
 		},
-		"description": {
-			"type": "string"
-		},
+		"description": {"type": "string"},
 		"scope": {
 			"type": "string",
 			"enum": [

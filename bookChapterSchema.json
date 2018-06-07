@@ -86,33 +86,25 @@
   		"format": "uri"
   	},
   	"description": {"type": "string"},
-    "chapter_type": {
-      "type": "string",
-      "enum": [
-        "Book, Chapter in Non-Scholarly Book-Revised",
-        "Book, Chapter in Non-Scholarly Book-New",
-        "Book, Chapter in Textbook-Revised",
-        "Book, Chapter in Textbook-New",
-        "Book, Chapter in Scholarly Book-Revised",
-        "Book, Chapter in Scholarly Book-New"
-      ]
-    },
-    "review_type": {
-      "type": "string",
-      "enum": [
-        "Blind Peer Reviewed",
-        "Non-blind Peer Reviewed",
-        "Editorially Reviewed",
-        "Invited",
-        "Not Reviewed"
-      ]
-    },
-    "in_ex": {
-      "type": "string",
-      "enum": [
-        "Internal",
-        "External"
-      ]
-    }
+  	"review_type": {
+  		"type": "string",
+  		"enum": [
+  			"Blind Peer Reviewed",
+  			"Non-blind Peer Reviewed",
+  			"Editorially Reviewed",
+  			"Not Reviewed"
+  		]
+  	},
+  	"chapter_type": {
+  		"type": "string",
+  		"enum": [
+  			"Book, Chapter in Non-Scholarly Book-Revised",
+  			"Book, Chapter in Non-Scholarly Book-New",
+  			"Book, Chapter in Textbook-Revised",
+  			"Book, Chapter in Textbook-New",
+  			"Book, Chapter in Scholarly Book-Revised",
+  			"Book, Chapter in Scholarly Book-New"
+  		]
+  	}
   }
 }

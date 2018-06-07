@@ -1,24 +1,31 @@
 {
 	"$schema": "http://json-schema.org/draft-06/schema#",
 	"$id": "http://dev.interfolio.com/json-schemas/SCP-transfer.json",
-	"title": "Professional Development Schema",
+	"title": "Professional Memberships Schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {"type": "string"},
-		"title": {"type": "string"},
 		"start_term": {"type": "string"},
 		"end_term": {"type": "string"},
 		"organization": {"type": "string"},
-		"city": {"type": "string"},
-		"state": {"type": "string"},
-		"hours_spent": {"type": ["string", "number"]},
+		"offices_held": {"type": "string"},
 		"description": {"type": "string"},
-		"category": {
+		"role": {
 			"type": "string",
 			"enum": [
-				"Instructional",
-				"Professional",
-				"Research"
+				"Chair",
+				"Co-Chair",
+				"Coordinator",
+				"Member"
+			]
+		},
+		"scope": {
+			"type": "string",
+			"enum": [
+				"Local",
+				"State",
+				"Regional",
+				"National",
+				"International"
 			]
 		}
 	}

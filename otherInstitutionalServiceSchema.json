@@ -4,23 +4,11 @@
 	"title": "Other Institutional Service Schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {
-			"type": "string"
-		},
-		"title": {
-			"type": "string"
-		},
-		"unit": {
-			"type": "string"
-		},
-		"start_term": {
-			"type": "string"
-		},
-		"end_term": {
-			"type": "string"
-		},
-		"description": {
-			"type": "string"
-		}
+		"faculty_id": {"type": "string"},
+		"title": {"type": "string"},
+		"unit": {"type": "string"},
+		"start_term": {"type": "string"},
+		"end_term": {"type": "string"},
+		"description": {"type": "string"}
 	}
 }

@@ -4,27 +4,15 @@
 	"title": "Additional Teaching and Pedagogical Activities Schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {
-			"type": "string"
-		},
-		"term": {
-			"type": "string"
-		},
-		"title": {
-			"type": "string"
-		},
-		"institution": {
-			"type": "string"
-		},
+		"faculty_id": {"type": "string"},
+		"term": {"type": "string"},
+		"title": {"type": "string"},
+		"institution": {"type": "string"},
 		"program": {
 			"description": "Department or program within which activity took place",
 			"type": "string"
 		},
-		"hours_spent": {
-			"type": "number"
-		},
-		"description": {
-			"type": "string"
-		}
+		"hours_spent": {"type": "number"},
+		"description": {"type": "string"}
 	}
 }

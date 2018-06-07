@@ -4,29 +4,13 @@
 	"title": "Work Experience Schema",
 	"type": "object",
 	"properties": {
-		"faculty_id": {
-			"type": "string"
-		},
-		"city": {
-			"type": "string"
-		},
-		"state": {
-			"type": "string"
-		},
-		"start_year": {
-			"type": "number"
-		},
-		"end_year": {
-			"type": "number"
-		},
-		"organization": {
-			"type": "string"
-		},
-		"highest_position": {
-			"type": "string"
-		},
-		"description": {
-			"type": "string"
-		}
+		"faculty_id": {"type": "string"},
+		"city": {"type": "string"},
+		"state": {"type": "string"},
+		"start_year": {"type": "number"},
+		"end_year": {"type": "number"},
+		"organization": {"type": "string"},
+		"highest_position": {"type": "string"},
+		"description": {"type": "string"}
 	}
 }

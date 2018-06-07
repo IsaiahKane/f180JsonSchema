@@ -4,12 +4,8 @@
 	"title": "Non-Credit Instruction Schema",
 	"type": "object",
 	"properties": {
-		"title": {
-			"type": "string"
-		},
-		"start_term": {
-			"type": "string"
-		},
+		"title": {"type": "string"},
+		"start_term": {"type": "string"},
 		"start_date": {
 			"type": "string",
 			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"
@@ -18,24 +14,12 @@
 			"type": "string",
 			"pattern": "^(19|20)\\d\\d([- /.])(0[1-9]|1[012])\\2(0[1-9]|[12][0-9]|3[01])$"
 		},
-		"sponsor": {
-			"type": "string"
-		},
-		"sponsor_location": {
-			"type": "string"
-		},
-		"audience": {
-			"type": "string"
-		},
-		"location_of_instruction": {
-			"type": "string"
-		},
-		"num_of_participants": {
-			"type": "number"
-		},
-		"description": {
-			"type": "string"
-		},
+		"sponsor": {"type": "string"},
+		"sponsor_location": {"type": "string"},
+		"audience": {"type": "string"},
+		"location_of_instruction": {"type": "string"},
+		"num_of_participants": {"type": "number"},
+		"description": {"type": "string"},
 		"acad_or_prof": {
 			"type": "string",
 			"enum": [
