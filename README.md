@@ -1,5 +1,12 @@
 # f180JsonSchema
 
+#### Schemas Needing Completion
+<br/>Abstract
+<br/>Dataset
+<br/>Online Resource
+<br/>Media Contribution
+<br/>Report
+
 #### Schemas Needing Review:
 Additional Teachings And Pedagogical Activities
 <br/>Advising Load 
